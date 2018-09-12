@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="header clearfix">
+      <h3 class="text-muted"><a href="index.html"><img src="../../assets/mcLogo.png"/></a>WebAuthn</h3>
+  </div>
+
+  <div class="jumbotron">
+      <h1>Welcome to FIDO2</h1>
+      <p class="lead">An example of FIDO2.0 Relying Party</p>
+  </div>
+
+  <div class="card-group">
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+              <h5 class="card-title">Registration</h5>
+              <p class="card-text">To test the login function you must first register yourself within the system</p>
+              <p class="card-text"><a [routerLink]="['/register']">Register</a></p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+              <h5 class="card-title">Login</h5>
+              <p class="card-text">Already registered? Test the login function of your authenticator</p>
+              <p class="card-text"><a [routerLink]="['/login']">Login</a></p>
+          </div>
+      </div>
+  </div>
+
+  <footer class="footer">
+      <p>2018 Mastercard</p>
+  </footer>
+
+</div>
