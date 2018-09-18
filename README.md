@@ -1,7 +1,6 @@
 # Fido 2 UI
-
-	- This project was made to be used with [MasterCard's Fido2 Server](https://github.com/Mastercard/fido2-rp-spring)
-	- Please note that each domain has it's own set of authenticators and can't be used across domains currently
+- This project was made to be used with [MasterCard's Fido2 Server](https://github.com/Mastercard/fido2-rp-spring)
+- Please note that each domain has it's own set of authenticators and can't be used across domains currently
 
 ## Development server
 
