@@ -7,8 +7,8 @@ import { environment } from '../../environments/environment';
 export class AttestationService {
     constructor(private http: HttpClient) { }
 
-    beginRegistration(username: String,displayName: String) {
-        return this.http.post<any>(`${environment.apiUrl}/attestation/options/`, {"username":username,"displayName":displayName});
+    beginRegistration(username: String,displayName: String, domain: String) {
+        return this.http.post<any>(`${environment.apiUrl}/attestation/options/`, {"username":username,"displayName":displayName, "domain":domain});
     }
 
     returnResult(response){

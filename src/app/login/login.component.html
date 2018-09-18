@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header clearfix">
+      <h3 class="text-muted"><a href="index.html"><img src="../../assets/mcLogo.png"/></a>WebAuthn</h3>
+  </div>
+
+  <div class="jumbotron">
+      <h1>Welcome to FIDO2</h1>
+      <p class="lead">An example of FIDO2.0 Relying Party</p>
+  </div>
+
+  <div id="loading" [hidden]="!loading">
+      <div id="spinner" class="spinner middlespin"></div>
+  </div>
+
+  <div class="row marketing">
+      <form  [formGroup]="loginForm" id="loginForm" class="form-signin" (ngSubmit)="onSubmit()">
+          <h2 class="form-signin-heading">Login</h2>
+          <label for="loginUsername" class="sr-only">Username</label>
+          <input type="text" formControlName="username" id="username" class="form-control" placeholder="Username" required="" autofocus="">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      </form>
+  </div>
+
+  <footer class="footer">
+      <p>2018 Mastercard</p>
+  </footer>
+
+</div>

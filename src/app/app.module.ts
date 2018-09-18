@@ -12,6 +12,8 @@ import { AlertComponent } from './services/alert.component';
 import { routing } from './app.routing';
 import { WindowRef } from './services/window';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { AssertionService } from './services/assertion';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
 
     HomeComponent,
-    AlertComponent
+    AlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     AttestationService,
+    AssertionService,
     Base64,
     AlertService,
     WindowRef

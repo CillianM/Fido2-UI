@@ -42,14 +42,14 @@ export class RegisterComponent implements OnInit {
   }
 
   beginRegistration(username: String, displayname: String) {
-    this.attestationService.beginRegistration(username, displayname)
+    this.attestationService.beginRegistration(username, displayname, this.domain)
       .pipe()
       .subscribe(
         data => {
           console.log(data);
           let v = this.preformatMakeCredReq(data);
           console.info("Updated Response from FIDO RP server ", v)
-          console.info("RP Domain = ", this.domain)
+          console.info("RP Domain = ", v.rp.id)
           v.rp.id = this.domain;
           const credentialPromise = new Promise((resolve, reject) => {
             resolve(this.window.navigator.credentials.create({ publicKey: v }));
@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
                   }
                 );
             },
-            (error) => {this.alertService.error("Error occured")}
+            (error) => {this.alertService.error(error)}
           );
 
         },
